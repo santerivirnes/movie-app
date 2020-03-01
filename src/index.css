@@ -1,13 +1,191 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'montserrat', sans-serif;
+  background-color: #fcac00;
+}
+
+header {
+  padding: 50px 15px 0px;
+  
+}
+header h1 {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 1px 1px 5px #9a3302;
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  margin:0 auto;
+
+}
+
+section {
+  padding: 15px;
+
+}
+
+.searchbox {
+  display:block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #eee;
+  font-size: 20px;
+  font-weight: 300;
+  color: #353535;
+  transition: 0.4s ease-out;
+  border-radius: 5px;
+}
+
+.searchbox:focus {
+  box-shadow: 1px 1px 15px #ffe572;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+
+.results .result {
+  width: 33.333%;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.results .result img {
+  display: block;
+  width: 100%;
+
+}
+
+.results .result h3 {
+  color: #353535;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  background: #ffd57a;
+  flex:1 1 100%;
+  transition: 0.4s ease-out;
+}
+
+.results .result:hover h3 {
+  background: #fff;
+  color: #4d4d4d;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fcac00;
+
+  overflow-y:scroll; 
+}
+
+.popup .content {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 25px;
+
+  color: #fff;
+}
+
+.popup .content h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.popup .content h2 span{
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.popup .content .rating{
+  margin-bottom: 30px;
+}
+
+.popup .content .plot img {
+  flex:1 1 50%;
+  max-width:300px;
+  padding: 0px 15px;
+}
+
+.popup .content .plot p {
+  flex: 1 1 50%;
+  padding: 15px;
+}
+
+.popup .content .close {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+
+  background:#ffe572;
+  color:#FFF;
+  border-radius: 8px;
+  border:none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.4s ease-out;
+}
+
+.popup .content .close:hover {
+  background: #af7a06;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+
+.suggestions .suggestion {
+  width: 33.333%;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.suggestions .suggestions img {
+  display: block;
+  width: 100%;
+
+}
+
+.suggestions .suggestion h3 {
+  color: #353535;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  background: #ffd57a;
+  flex:1 1 100%;
+  transition: 0.4s ease-out;
+}
+
+.suggestions .suggestion:hover h3 {
+  background: #fff;
+  color: #4d4d4d;
 }
